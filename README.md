@@ -1,3 +1,4 @@
 # Gitでよく使うコマンド集
 
-- git remote
+- git remote: リモートリポジトリの一覧を出力
+- 
