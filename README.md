@@ -12,3 +12,4 @@
 - git reset HEAD {ファイルパス}: ステージングにある対象ファイルをワークツリーに戻す
 - git commit: インデックスにある全ファイルをコミットする
 - git revert HEAD: 直前のコミットを元に戻すコミットを作成する
+- git push origin {ローカルブランチ名}: 対象ローカルブランチをoriginにpushする
