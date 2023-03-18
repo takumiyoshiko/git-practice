@@ -13,6 +13,5 @@
 - git commit: インデックスにある全ファイルをコミットする
 - git revert HEAD: 直前のコミットを元に戻すコミットを作成する
 - git push origin {ローカルブランチ名}: 対象ローカルブランチをoriginにpushする
-
 - git fetch origin: originから最新の履歴を取得
 - git rebase origin/{ブランチ名}: originにある対象ブランチを、チェックアウト中のブランチへリベースする
