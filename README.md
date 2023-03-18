@@ -41,6 +41,19 @@
 ### 複数のコミットを一つにまとめる
 - 複数コミットを追加
 - `git rebase -i HEAD~3`
+- エディタが出現
+```
+pick 4b789e8 rebase用コミット①
+pick 46f1ffb rebase用コミット②
+pick 71999a2 rebase用コミット③
+```
+- まとめたいコミットをsquashに変更
+```
+pick 4b789e8 rebase用コミット①
+squash 46f1ffb rebase用コミット②
+squash 71999a2 rebase用コミット③
+```
+- 編集を保存するとコミットログのエディタが出現するのでコメントを編集
 
 ### force-pushを復活させる
 `git reflog`
