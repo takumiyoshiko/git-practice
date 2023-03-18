@@ -35,6 +35,7 @@
 - `git stash drop stash@{0}` ← 退避した変更を削除 ( `git stash pop stash@{0}`で退避した作業を元に戻すと同時に削除できる)
 
 ### PRのマージを取り消す
+- `git commit `
 `git revert`
 
 ### force-pushを復活させる
