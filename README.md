@@ -38,8 +38,9 @@
 - sample.txtを編集しコミット ← 取り消したい
 - `git revert {コミットハッシュ}` ← 変更を取り消すコミットを追加
 
+### 複数のコミットを一つにまとめる
+- 複数コミットを追加
+- `git rebase -i HEAD~3`
+
 ### force-pushを復活させる
 `git reflog`
-
-### push後にrebaseしてしまった時の対処法
-``
