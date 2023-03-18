@@ -1,4 +1,6 @@
-# Gitでよく使うコマンド集
+# git-practice
+
+## Gitでよく使うコマンド集
 
 - git remote: リモートリポジトリの一覧を出力
 - git branch: ローカルブランチの一覧を出力
@@ -20,3 +22,38 @@
 - git stash list: スタッシュの一覧を出力する
 - git blame {ファイルパス}: 対象ファイル全体の各行ごとに、最後に編集したリビジョンと作者を表示する
 - git log: コミットログを表示
+
+
+## 困った時に使えそうな対処法
+
+### コミットせずに変更を退避する
+- sample.txtを編集 ← 変更を退避したい
+- `git stash -u` ← 変更を退避
+- `git stash list` ← 退避した変更を確認
+- 別作業
+- `git stash apply stash@{0}` ← 退避した変更を元に戻す (stash@{0}には戻したい変更分に適宜変更)
+- `git stash drop stash@{0}` ← 退避した変更を削除 ( `git stash pop stash@{0}`で退避した作業を元に戻すと同時に削除できる)
+
+### 特定のコミット処理を取り消す
+- sample.txtを編集しコミット ← 取り消したい
+- `git revert {コミットハッシュ}` ← 変更を取り消すコミットを追加
+
+### 複数のコミットを一つにまとめる
+- 複数コミットを追加
+- `git rebase -i HEAD~3`
+- エディタが出現
+```
+pick 4b789e8 rebase用コミット①
+pick 46f1ffb rebase用コミット②
+pick 71999a2 rebase用コミット③
+```
+- まとめたいコミットをsquashに変更
+```
+pick 4b789e8 rebase用コミット①
+squash 46f1ffb rebase用コミット②
+squash 71999a2 rebase用コミット③
+```
+- 編集を保存するとコミットログのエディタが出現するのでコメントを編集
+
+### force-pushを復活させる
+`git reflog`
