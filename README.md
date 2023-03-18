@@ -34,8 +34,9 @@
 - `git stash apply stash@{0}` ← 退避した変更を元に戻す (stash@{0}には戻したい変更分に適宜変更)
 - `git stash drop stash@{0}` ← 退避した変更を削除 ( `git stash pop stash@{0}`で退避した作業を元に戻すと同時に削除できる)
 
-### PRのマージを取り消す
-`git revert`
+### 特定のコミット処理を取り消す
+- sample.txtを編集しコミット ← 取り消したい
+- `git revert {コミットハッシュ}` ← 変更を取り消すコミットを追加
 
 ### force-pushを復活させる
 `git reflog`
