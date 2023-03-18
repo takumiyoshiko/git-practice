@@ -27,12 +27,12 @@
 ## 困った時に使えそうな対処法
 
 ### コミットせずに変更を退避する
-- sample.txtを編集 ← 変更を退避したい
-- `git stash -u` ← 変更を退避
-- `git stash list` ← 退避した変更を確認
+- ファイルを編集 
+- `git stash -u`: 変更を退避
+- `git stash list`: 退避した変更を確認
 - 別作業
-- `git stash apply stash@{0}` ← 退避した変更を元に戻す (stash@{0}には戻したい変更分に適宜変更)
-- `git stash drop stash@{0}` ← 退避した変更を削除 ( `git stash pop stash@{0}`で退避した作業を元に戻すと同時に削除できる)
+- `git stash apply stash@{0}`: 退避した変更を元に戻す (stash@{0}には戻したい変更分に適宜変更)
+- `git stash drop stash@{0}`: 退避した変更を削除 ( `git stash pop stash@{0}`で退避した作業を元に戻すと同時に削除できる)
 
 ### 特定のコミット処理を取り消す
 - sample.txtを編集しコミット ← 取り消したい
