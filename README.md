@@ -55,5 +55,7 @@ squash 71999a2 rebase用コミット③
 ```
 - 編集を保存するとコミットログのエディタが出現するのでコメントを編集
 
-### force-pushを復活させる
-`git reflog`
+### reset hardしたコミットを復活させる
+- `git reset --hard HEAD^`: 一つ前のコミットを削除
+- `git reflog` : gitの操作履歴を参照
+- `git reset --hard HEAD@{1}`: `git reset --hard HEAD^`の前の状態に戻す
