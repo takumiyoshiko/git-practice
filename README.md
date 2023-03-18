@@ -16,3 +16,4 @@
 - git fetch origin: originから最新の履歴を取得
 - git rebase origin/{ブランチ名}: originにある対象ブランチを、チェックアウト中のブランチへリベースする
 - git merge origin/{ブランチ名}: originにある対象ブランチをチェックアウト中のブランチへマージする
+- git cherry-pick {コミットID}: 対象コミットをチェリーピックする
