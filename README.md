@@ -15,3 +15,4 @@
 - git push origin {ローカルブランチ名}: 対象ローカルブランチをoriginにpushする
 
 - git fetch origin: originから最新の履歴を取得
+- git rebase origin/{ブランチ名}: originにある対象ブランチを、チェックアウト中のブランチへリベースする
